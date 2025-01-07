@@ -26,6 +26,10 @@ public class CustomWebApplicationServer {
             Socket clientSocket;
             logger.info("[CustomWebApplicationServer] waiting for client.");
 
+            /**
+             * step1 - 사용자 요청을 메인 Thread가 처리
+             */
+
             // while 1 start
             while ((clientSocket = serverSocket.accept()) != null) {
                 logger.info("[CustomWebApplicationServer] client connected.");
